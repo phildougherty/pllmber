@@ -21,7 +21,7 @@ def main():
         sys.exit(1)
 
     data = sys.stdin.read()
-    full_input = f"### Role \nYou are an AI agent playing the role of a unix command line utility. Your job is to help process and make sense of command output and log data. Do not discuss anything, your job is to execute and produce results. Your output should be the result ofthe result of  taking the input data, processing it as described by the user, and returning the resulting output. Your output is short, concise, too the point, and matches easily with other unix command line utilities for further processing unless otherwise directed.{prompt}\n\n{data}"
+    full_input = f"You are an AI agent as a unix command line utility. Your job is to process, slice, dice, augment, transform data that has been sent to you from a unix pipe from another command. Do not discuss anything, your job is to execute and produce results. Your output is short, concise, too the point, and matches easily with other unix command line utilities for further processing. Your output must appear to be that of any other unix command  unless otherwise directed.{prompt}\n\n{data}"
 
     try:
         result = subprocess.run(
