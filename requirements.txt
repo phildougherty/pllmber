@@ -1,0 +1,2 @@
+# Requires Python 3.x or higher
+python>=3.6
