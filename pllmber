@@ -12,7 +12,7 @@ def main():
 
     args = parser.parse_args()
 
-    default_model = os.getenv('PLLUMBER_DEFAULT_MODEL', 'llama3.1:8b')
+    default_model = os.getenv('PLLMBER_DEFAULT_MODEL', 'llama3.1:8b')
     model = args.model if args.model else default_model
     prompt = args.prompt if args.prompt else args.shorthand_prompt
 
